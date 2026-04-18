@@ -174,7 +174,7 @@
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       gap: 18px;
       margin-top: 24px;
     }
@@ -316,30 +316,6 @@
         <button class="filter-btn is-active" type="button" data-filter="all">ทั้งหมด</button>
         <button class="filter-btn" type="button" data-filter="thai">ไทย</button>
         <button class="filter-btn" type="button" data-filter="inter">ต่างประเทศ</button>
-      </div>
-    </section>
-
-    <section class="section-block" data-section="inter">
-      <div class="section-head">
-        <h2 class="section-title">วารสารต่างประเทศ</h2>
-        <p class="section-note">เรียงตามตัวอักษร</p>
-      </div>
-      <div class="grid">
-        <a class="card" href="https://www.tandfonline.com/loi/hchn20" target="_blank" rel="noopener noreferrer" data-search="journal of community health nursing" data-group="inter">
-          <img class="thumb" src="./Journal-TH_files/Journal-of-Community-Health-Nursing.jpg" alt="Journal of Community Health Nursing" loading="lazy">
-          <div class="card-body">
-            <p class="name">Journal of Community Health Nursing</p>
-            <p class="meta">Journal of Community Health Nursing</p>
-          </div>
-        </a>
-
-        <a class="card" href="https://www.jenonline.org/" target="_blank" rel="noopener noreferrer" data-search="journal of emergency nursing" data-group="inter">
-          <img class="thumb" src="./Journal-TH_files/Journal-of-Emergency-Nursing.jpg" alt="Journal of Emergency Nursing" loading="lazy">
-          <div class="card-body">
-            <p class="name">Journal of Emergency Nursing</p>
-            <p class="meta">Journal of Emergency Nursing</p>
-          </div>
-        </a>
       </div>
     </section>
 
@@ -542,6 +518,31 @@
         </a>
       </div>
     </section>
+
+    <section class="section-block" data-section="inter">
+      <div class="section-head">
+        <h2 class="section-title">วารสารต่างประเทศ</h2>
+        <p class="section-note">เรียงตามตัวอักษร</p>
+      </div>
+      <div class="grid">
+        <a class="card" href="https://www.tandfonline.com/loi/hchn20" target="_blank" rel="noopener noreferrer" data-search="journal of community health nursing" data-group="inter">
+          <img class="thumb" src="./Journal-TH_files/Journal-of-Community-Health-Nursing.jpg" alt="Journal of Community Health Nursing" loading="lazy">
+          <div class="card-body">
+            <p class="name">Journal of Community Health Nursing</p>
+            <p class="meta">Journal of Community Health Nursing</p>
+          </div>
+        </a>
+
+        <a class="card" href="https://www.jenonline.org/" target="_blank" rel="noopener noreferrer" data-search="journal of emergency nursing" data-group="inter">
+          <img class="thumb" src="./Journal-TH_files/Journal-of-Emergency-Nursing.jpg" alt="Journal of Emergency Nursing" loading="lazy">
+          <div class="card-body">
+            <p class="name">Journal of Emergency Nursing</p>
+            <p class="meta">Journal of Emergency Nursing</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
 
     <div class="empty" id="emptyState">ไม่พบรายการที่ตรงกับคำค้นหา</div>
   </main>
