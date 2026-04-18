@@ -23,14 +23,24 @@
       box-sizing: border-box;
     }
 
+    html {
+      width: 100%;
+      overflow-x: hidden;
+      -webkit-text-size-adjust: 100%;
+    }
+
     body {
       margin: 0;
+      width: 100%;
+      min-width: 320px;
+      overflow-x: hidden;
       font-family: "Segoe UI", Tahoma, sans-serif;
       background: var(--bg);
       color: var(--text);
     }
 
     .page {
+      width: 100%;
       max-width: 1240px;
       margin: 0 auto;
       padding: 28px 20px 40px;
@@ -174,9 +184,10 @@
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-template-columns: repeat(5, minmax(0, 1fr));
       gap: 18px;
       margin-top: 24px;
+      align-items: stretch;
     }
 
     .section-block {
@@ -208,7 +219,9 @@
     .card {
       display: flex;
       flex-direction: column;
+      width: 100%;
       height: 100%;
+      min-height: 100%;
       text-decoration: none;
       color: inherit;
       background: var(--panel);
@@ -275,6 +288,18 @@
       display: none;
     }
 
+    @media (max-width: 1024px) {
+      .grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 860px) {
+      .grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
     @media (max-width: 640px) {
       .page {
         padding: 16px 14px 28px;
@@ -283,6 +308,16 @@
       .hero {
         padding: 20px 16px;
         border-radius: 26px;
+      }
+
+      .toolbar {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .count {
+        width: 100%;
+        text-align: center;
       }
 
       .grid {
@@ -300,7 +335,7 @@
   <main class="page">
     <section class="hero">
       <h1>วารสารและแหล่งข้อมูลที่เกี่ยวข้องกับการพยาบาล</h1>
-      <p class="subtitle">รวมรายการวารสารที่เกี่ยวข้องกับการพยาบาลเพื่อเปิดดูต่อได้ทันที สามารถค้นหาจากชื่อวารสารภาษาไทยหรือภาษาอังกฤษได้จากช่องค้นหาด้านล่าง</p>
+      <p class="subtitle">รวมรายการวารสารที่เกี่ยวข้องกับการพยาบาลเพื่อเปิดดูต่อได้ทันที พร้อมรหัสวารสาร ISSN และ E-ISSN สำหรับใช้อ้างอิงและจัดการฐานข้อมูล สามารถค้นหาจากชื่อวารสารภาษาไทยหรือภาษาอังกฤษได้จากช่องค้นหาด้านล่าง</p>
 
       <div class="toolbar">
         <label class="search-wrap" for="searchInput" aria-label="ค้นหารายการวารสาร">
@@ -330,6 +365,8 @@
           <div class="card-body">
             <p class="name">พยาบาลสาร มหาวิทยาลัยเชียงใหม่</p>
             <p class="meta">Nursing Journal CMU</p>
+
+            <p class="meta">ISSN: 2821-9120 | E-ISSN: 2821-3139</p>
           </div>
         </a>
 
@@ -338,6 +375,8 @@
           <div class="card-body">
             <p class="name">วารสารการพยาบาลและการศึกษา</p>
             <p class="meta">Journal of Nursing and Education</p>
+ 
+            <p class="meta">ISSN: 1906-1773 | E-ISSN: 2821-9058</p>
           </div>
         </a>
 
@@ -346,6 +385,8 @@
           <div class="card-body">
             <p class="name">วารสารการพยาบาลและการดูแลสุขภาพ</p>
             <p class="meta">Journal of Nursing and Therapeutic Care</p>
+
+            <p class="meta">ISSN: — | E-ISSN: 2985-1432</p>
           </div>
         </a>
 
@@ -354,6 +395,8 @@
           <div class="card-body">
             <p class="name">วารสารการพยาบาลจิตเวชและสุขภาพจิต</p>
             <p class="meta">The Journal of Psychiatric Nursing and Mental Health</p>
+
+            <p class="meta">ISSN: — | E-ISSN: 3027-8031</p>
           </div>
         </a>
 
@@ -362,6 +405,8 @@
           <div class="card-body">
             <p class="name">วารสารการวิจัยทางการพยาบาล นวัตกรรม และสุขภาพ จุฬาลงกรณ์มหาวิทยาลัย</p>
             <p class="meta">Journal of Nursing Research, Innovation, and Health</p>
+
+            <p class="meta">ISSN: — | E-ISSN: 3065-9893</p>
           </div>
         </a>
 
@@ -370,6 +415,8 @@
           <div class="card-body">
             <p class="name">วารสารวิจัยและนวัตกรรมทางการพยาบาล</p>
             <p class="meta">Nursing Research and Innovation Journal</p>
+
+            <p class="meta">ISSN: 2822-1370 | E-ISSN: 2822-1389</p>
           </div>
         </a>
 
@@ -378,6 +425,8 @@
           <div class="card-body">
             <p class="name">วารสารวิจัยการพยาบาลและสุขภาพ</p>
             <p class="meta">Journal of Nursing and Health Research</p>
+
+            <p class="meta">ISSN: — | E-ISSN: 2985-1343</p>
           </div>
         </a>
 
@@ -386,6 +435,8 @@
           <div class="card-body">
             <p class="name">วารสารเครือข่ายวิทยาลัยพยาบาลและวิทยาลัยการสาธารณสุขภาคใต้ (SC-Net)</p>
             <p class="meta">Network Journal of Nursing and Public Health</p>
+
+            <p class="meta">ISSN: — | E-ISSN: 2985-1750</p>
           </div>
         </a>
 
@@ -393,7 +444,9 @@
           <img class="thumb" src="./Journal-TH_files/วารสารพยาบาลกระทรวงสาธารณสุข.png" alt="วารสารพยาบาลกระทรวงสาธารณสุข" loading="lazy">
           <div class="card-body">
             <p class="name">วารสารพยาบาลกระทรวงสาธารณสุข</p>
-            <p class="meta">Network Journal of the Ministry of Public Health</p>
+            <p class="meta">Nursing Journal of The Ministry of Public Health</p>
+
+            <p class="meta">ISSN: 0857-3743 | E-ISSN: 2673-0693</p>
           </div>
         </a>
 
@@ -402,6 +455,8 @@
           <div class="card-body">
             <p class="name">วารสารพยาบาลตำรวจ</p>
             <p class="meta">Journal of the Police Nurses and Health Science</p>
+
+            <p class="meta">ISSN: — | E-ISSN: 3027-8791</p>
           </div>
         </a>
 
@@ -410,6 +465,8 @@
           <div class="card-body">
             <p class="name">วารสารพยาบาลศาสตร์และสุขภาพ มหาวิทยาลัยขอนแก่น</p>
             <p class="meta">Journal of Nursing Science and Health</p>
+   
+            <p class="meta">ISSN: — | E-ISSN: 2822-1133</p>
           </div>
         </a>
 
@@ -418,6 +475,8 @@
           <div class="card-body">
             <p class="name">วารสารพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</p>
             <p class="meta">Nursing Science Journal of Thailand</p>
+
+            <p class="meta">ISSN: 0125-8885 | E-ISSN: 2651-1959</p>
           </div>
         </a>
 
@@ -425,7 +484,9 @@
           <img class="thumb" src="./Journal-TH_files/วารสารพยาบาลศาสตร์มสยาม.jpg" alt="วารสารพยาบาลศาสตร์ มหาวิทยาลัยสยาม" loading="lazy">
           <div class="card-body">
             <p class="name">วารสารพยาบาลศาสตร์ มหาวิทยาลัยสยาม</p>
-            <p class="meta">Journal of Nursing Siam University</p>
+            <p class="meta">Journal of Nursing, Siam University</p>
+
+            <p class="meta">ISSN: — | E-ISSN: 3088-1137</p>
           </div>
         </a>
 
@@ -434,6 +495,8 @@
           <div class="card-body">
             <p class="name">วารสารพยาบาลสภากาชาดไทย</p>
             <p class="meta">Thai Red Cross Nursing Journal</p>
+
+            <p class="meta">ISSN: — | E-ISSN: 3027-6489</p>
           </div>
         </a>
 
@@ -442,6 +505,8 @@
           <div class="card-body">
             <p class="name">วารสารพยาบาลสาธารณสุขไทย</p>
             <p class="meta">Journal of Public Health Nursing</p>
+
+            <p class="meta">ISSN: 3057-014X | E-ISSN: 3057-0158</p>
           </div>
         </a>
 
@@ -450,6 +515,8 @@
           <div class="card-body">
             <p class="name">วารสารพยาบาลทหารบก</p>
             <p class="meta">Journal of the Royal Thai Army Nurses</p>
+
+            <p class="meta">ISSN: — | E-ISSN: 2985-1041</p>
           </div>
         </a>
 
@@ -457,7 +524,9 @@
           <img class="thumb" src="./Journal-TH_files/วารสารพยาบาลโรคหัวใจ.png" alt="วารสารพยาบาลโรคหัวใจและทรวงอก" loading="lazy">
           <div class="card-body">
             <p class="name">วารสารพยาบาลโรคหัวใจและทรวงอก</p>
-            <p class="meta">Journal of Cardio-Thoracic Nursing</p>
+            <p class="meta">Thai Journal of Cardio-Thoracic Nursing</p>
+         
+            <p class="meta">ISSN: 0857-605X | E-ISSN: 2672-9474</p>
           </div>
         </a>
 
@@ -466,6 +535,8 @@
           <div class="card-body">
             <p class="name">วารสารสภาการพยาบาล</p>
             <p class="meta">Journal of Thailand Nursing and Midwifery Council (JTNMC)</p>
+            
+            <p class="meta">ISSN: 1513-1262 | E-ISSN: 2985-0894</p>
           </div>
         </a>
 
@@ -474,6 +545,8 @@
           <div class="card-body">
             <p class="name">วารสารสมาคมจิตแพทย์แห่งประเทศไทย</p>
             <p class="meta">The Journal of the Psychiatric Association of Thailand</p>
+          
+            <p class="meta">ISSN: — | E-ISSN: 2697-4126</p>
           </div>
         </a>
 
@@ -482,6 +555,8 @@
           <div class="card-body">
             <p class="name">วารสารสุขภาพจิตแห่งประเทศไทย</p>
             <p class="meta">Journal of Mental Health of Thailand</p>
+            
+            <p class="meta">ISSN: 3057-1545 | E-ISSN: 3057-1553</p>
           </div>
         </a>
 
@@ -489,7 +564,9 @@
           <img class="thumb" src="https://nurse.hcu.ac.th/wp-content/uploads/2025/04/%E0%B8%A7%E0%B8%B2%E0%B8%A3%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%AA%E0%B8%B8%E0%B8%82%E0%B8%A8%E0%B8%B6%E0%B8%81%E0%B8%A9%E0%B8%B2.jpg" alt="วารสารสุขศึกษา" loading="lazy">
           <div class="card-body">
             <p class="name">วารสารสุขศึกษา</p>
-            <p class="meta">คณะสาธารณสุขศาสตร์ ม.มหิดล</p>
+            <p class="meta">Thai Journal of Health Education</p>
+          
+            <p class="meta">ISSN: — | E-ISSN: 3027-6934</p>
           </div>
         </a>
 
@@ -498,6 +575,8 @@
           <div class="card-body">
             <p class="name">วารสารสุขภาพและการศึกษาพยาบาล</p>
             <p class="meta">Journal of Health and Nursing Education</p>
+           
+            <p class="meta">ISSN: — | E-ISSN: 2985-1033</p>
           </div>
         </a>
 
@@ -506,6 +585,8 @@
           <div class="card-body">
             <p class="name">วารสารพยาบาล</p>
             <p class="meta">Thai Journal of Nursing</p>
+            
+            <p class="meta">ISSN: — | E-ISSN: 3057-188X</p>
           </div>
         </a>
 
@@ -514,6 +595,8 @@
           <div class="card-body">
             <p class="name">เวชบันทึกศิริราช</p>
             <p class="meta">The Siriraj Medical Bulletin (SMB)</p>
+            
+            <p class="meta">ISSN: — | E-ISSN: 2697-4436</p>
           </div>
         </a>
       </div>
@@ -530,6 +613,8 @@
           <div class="card-body">
             <p class="name">Journal of Community Health Nursing</p>
             <p class="meta">Journal of Community Health Nursing</p>
+   
+            <p class="meta">ISSN: 0737-0016 | E-ISSN: 1532-7655</p>
           </div>
         </a>
 
@@ -538,6 +623,8 @@
           <div class="card-body">
             <p class="name">Journal of Emergency Nursing</p>
             <p class="meta">Journal of Emergency Nursing</p>
+        
+            <p class="meta">ISSN: 0099-1767 | E-ISSN: 1527-2966</p>
           </div>
         </a>
       </div>
