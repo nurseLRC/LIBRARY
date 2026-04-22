@@ -201,7 +201,7 @@
     .section-head {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: flex-start;
       gap: 12px;
       margin-bottom: 12px;
       padding: 0 2px;
@@ -256,6 +256,13 @@
       flex-direction: column;
       gap: 8px;
       padding: 14px 14px 16px;
+    }
+
+    .grid-divider {
+      grid-column: 1 / -1;
+      height: 1px;
+      margin: 4px 6px 2px;
+      background: linear-gradient(90deg, transparent, rgba(141, 99, 210, 0.18), transparent);
     }
 
     .name {
@@ -377,9 +384,55 @@
     <section class="section-block" data-section="thai">
       <div class="section-head">
         <h2 class="section-title">วารสารไทย</h2>
-        <p class="section-note">เรียงตามตัวอักษร</p>
       </div>
       <div class="grid">
+        <a class="card" href="https://he02.tci-thaijo.org/index.php/TJN" target="_blank" rel="noopener noreferrer" data-search="วารสารพยาบาล สมาคมพยาบาลแห่งประเทศไทย thai journal of nursing" data-group="thai">
+          <img class="thumb" src="./Journal-TH_files/วารสารพยาบาล.png" alt="วารสารพยาบาล" loading="lazy">
+          <div class="card-body">
+            <p class="name">วารสารพยาบาล</p>
+            <p class="meta">Thai Journal of Nursing</p>
+            <p class="meta">ISSN: — | E-ISSN: 3057-188X</p>
+          </div>
+        </a>
+
+        <a class="card" href="https://he02.tci-thaijo.org/index.php/journalthaicvtnurse" target="_blank" rel="noopener noreferrer" data-search="วารสารพยาบาลโรคหัวใจและทรวงอก journal of cardio-thoracic nursing" data-group="thai">
+          <img class="thumb" src="./Journal-TH_files/หัวใจและทรวงอก.png" alt="วารสารพยาบาลโรคหัวใจและทรวงอก" loading="lazy">
+          <div class="card-body">
+            <p class="name">วารสารพยาบาลโรคหัวใจและทรวงอก</p>
+            <p class="meta">Thai Journal of Cardio-Thoracic Nursing</p>
+            <p class="meta">ISSN: 0857-605X | E-ISSN: 2672-9474</p>
+          </div>
+        </a>
+
+        <a class="card" href="https://he02.tci-thaijo.org/index.php/trcnj" target="_blank" rel="noopener noreferrer" data-search="วารสารพยาบาลสภากาชาดไทย thai red cross nursing journal" data-group="thai">
+          <img class="thumb" src="./Journal-TH_files/สภากาชาด.png" alt="วารสารพยาบาลสภากาชาดไทย" loading="lazy">
+          <div class="card-body">
+            <p class="name">วารสารพยาบาลสภากาชาดไทย</p>
+            <p class="meta">Thai Red Cross Nursing Journal</p>
+            <p class="meta">ISSN: — | E-ISSN: 3027-6489</p>
+          </div>
+        </a>
+
+        <a class="card" href="https://he01.tci-thaijo.org/index.php/kcn" target="_blank" rel="noopener noreferrer" data-search="วารสารเกื้อการุณย์ kuakarun journal of nursing" data-group="thai">
+          <img class="thumb" src="./Journal-TH_files/เกื้อ.png" alt="วารสารเกื้อการุณย์" loading="lazy">
+          <div class="card-body">
+            <p class="name">วารสารเกื้อการุณย์</p>
+            <p class="meta">Kuakarun Journal of Nursing</p>
+            <p class="meta">ISSN: 1906-652X | E-ISSN: 2697-5475</p>
+          </div>
+        </a>
+
+        <a class="card" href="http://www.thaiphn.org/journal/thai/2560/31_4.html" target="_blank" rel="noopener noreferrer" data-search="วารสารพยาบาลสาธารณสุข วารสารพยาบาลสาธารณสุขไทย journal of public health nursing" data-group="thai">
+          <img class="thumb" src="./Journal-TH_files/สาธาร.jpg" alt="วารสารพยาบาลสาธารณสุขไทย" loading="lazy">
+          <div class="card-body">
+            <p class="name">วารสารพยาบาลสาธารณสุขไทย</p>
+            <p class="meta">Journal of Public Health Nursing</p>
+            <p class="meta">ISSN: 3057-014X | E-ISSN: 3057-0158</p>
+          </div>
+        </a>
+
+        <div class="grid-divider" aria-hidden="true"></div>
+
         <a class="card" href="https://he02.tci-thaijo.org/index.php/cmunursing" target="_blank" rel="noopener noreferrer" data-search="พยาบาลสาร มหาวิทยาลัยเชียงใหม่ nursing journal cmu" data-group="thai">
           <img class="thumb" src="./Journal-TH_files/Nursing-Journal-CMU-cover.png" alt="พยาบาลสาร มหาวิทยาลัยเชียงใหม่" loading="lazy">
           <div class="card-body">
@@ -497,39 +550,12 @@
           </div>
         </a>
 
-        <a class="card" href="https://he02.tci-thaijo.org/index.php/trcnj" target="_blank" rel="noopener noreferrer" data-search="วารสารพยาบาลสภากาชาดไทย thai red cross nursing journal" data-group="thai">
-          <img class="thumb" src="./Journal-TH_files/วารสารพยาบาลศาสตร์สภากาชาดไทย.jpg" alt="วารสารพยาบาลสภากาชาดไทย" loading="lazy">
-          <div class="card-body">
-            <p class="name">วารสารพยาบาลสภากาชาดไทย</p>
-            <p class="meta">Thai Red Cross Nursing Journal</p>
-            <p class="meta">ISSN: — | E-ISSN: 3027-6489</p>
-          </div>
-        </a>
-
-        <a class="card" href="http://www.thaiphn.org/journal/thai/2560/31_4.html" target="_blank" rel="noopener noreferrer" data-search="วารสารพยาบาลสาธารณสุขไทย journal of public health nursing" data-group="thai">
-          <img class="thumb" src="https://nurse.hcu.ac.th/wp-content/uploads/2025/04/%E0%B8%A7%E0%B8%B2%E0%B8%A3%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%9E%E0%B8%A2%E0%B8%B2%E0%B8%9A%E0%B8%B2%E0%B8%A5%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%AA%E0%B8%B8%E0%B8%82.png" alt="วารสารพยาบาลสาธารณสุขไทย" loading="lazy">
-          <div class="card-body">
-            <p class="name">วารสารพยาบาลสาธารณสุขไทย</p>
-            <p class="meta">Journal of Public Health Nursing</p>
-            <p class="meta">ISSN: 3057-014X | E-ISSN: 3057-0158</p>
-          </div>
-        </a>
-
         <a class="card" href="https://he01.tci-thaijo.org/index.php/JRTAN" target="_blank" rel="noopener noreferrer" data-search="วารสารพยาบาลทหารบก journal of the royal thai army nurses" data-group="thai">
           <img class="thumb" src="./Journal-TH_files/วารสารพยาบาลทหารบก.png" alt="วารสารพยาบาลทหารบก" loading="lazy">
           <div class="card-body">
             <p class="name">วารสารพยาบาลทหารบก</p>
             <p class="meta">Journal of the Royal Thai Army Nurses</p>
             <p class="meta">ISSN: — | E-ISSN: 2985-1041</p>
-          </div>
-        </a>
-
-        <a class="card" href="https://he02.tci-thaijo.org/index.php/journalthaicvtnurse" target="_blank" rel="noopener noreferrer" data-search="วารสารพยาบาลโรคหัวใจและทรวงอก journal of cardio-thoracic nursing" data-group="thai">
-          <img class="thumb" src="./Journal-TH_files/วารสารพยาบาลโรคหัวใจ.png" alt="วารสารพยาบาลโรคหัวใจและทรวงอก" loading="lazy">
-          <div class="card-body">
-            <p class="name">วารสารพยาบาลโรคหัวใจและทรวงอก</p>
-            <p class="meta">Thai Journal of Cardio-Thoracic Nursing</p>
-            <p class="meta">ISSN: 0857-605X | E-ISSN: 2672-9474</p>
           </div>
         </a>
 
@@ -575,15 +601,6 @@
             <p class="name">วารสารสุขภาพและการศึกษาพยาบาล</p>
             <p class="meta">Journal of Health and Nursing Education</p>
             <p class="meta">ISSN: — | E-ISSN: 2985-1033</p>
-          </div>
-        </a>
-
-        <a class="card" href="https://he02.tci-thaijo.org/index.php/TJN" target="_blank" rel="noopener noreferrer" data-search="วารสารพยาบาล thai journal of nursing" data-group="thai">
-          <img class="thumb" src="./Journal-TH_files/Thai-Journal-of-Nursing.png" alt="วารสารพยาบาล" loading="lazy">
-          <div class="card-body">
-            <p class="name">วารสารพยาบาล</p>
-            <p class="meta">Thai Journal of Nursing</p>
-            <p class="meta">ISSN: — | E-ISSN: 3057-188X</p>
           </div>
         </a>
 
